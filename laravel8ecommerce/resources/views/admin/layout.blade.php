@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>@yield('page_title')</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('public/admin_assets/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -56,13 +56,29 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li>
-                            <a href="dashboard">
+                        <li class="@yield('dashboard_select')">
+                            <a href="{{url('admin/dashboard')}}">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="category">
-                                <i class="fas fa-tachometer-alt"></i>Category</a>
+                        <li class="@yield('category_select')">
+                            <a href="{{url('admin/category')}}">
+                                <i class="fas fa-list"></i>Category</a>
+                        </li>
+                        <li class="@yield('coupen_select')">
+                            <a href="{{url('admin/coupen')}}">
+                                <i class="fas fa-tag"></i>Coupen</a>
+                        </li>
+                        <li class="@yield('size_select')">
+                            <a href="{{url('admin/size')}}">
+                                <i class="fas fa-window-maximize"></i>Size</a>
+                        </li>
+                           <li class="@yield('color_select')">
+                            <a href="{{url('admin/color')}}">
+                                <i class="fas fa-palette"></i>Color</a>
+                        </li>
+                        <li class="@yield('product_select')">
+                            <a href="{{url('admin/product')}}">
+                                <i class="fas fa-product-hunt"></i>Product</a>
                         </li>
                     </ul>
                 </div>
@@ -80,13 +96,29 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
-                            <a href="dashboard">
+                        <li class="@yield('dashboard_select')">
+                            <a href="{{url('admin/dashboard')}}">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="category">
-                                <i class="fas fa-tachometer-alt"></i>Category</a>
+                        <li class="@yield('category_select')">
+                            <a href="{{url('admin/category')}}">
+                                <i class="fas fa-list"></i>Category</a>
+                        </li>
+                          <li class="@yield('coupen_select')">
+                            <a href="{{url('admin/coupen')}}">
+                                <i class="fas fa-tag"></i>Coupen</a>
+                        </li>
+                        <li class="@yield('size_select')">
+                            <a href="{{url('admin/size')}}">
+                                <i class="fas fa-window-maximize"></i>Size</a>
+                        </li>
+                        <li class="@yield('color_select')">
+                            <a href="{{url('admin/color')}}">
+                                <i class="fas fa-paint-brush"></i>Color</a>
+                        </li>
+                        <li class="@yield('product_select')">
+                            <a href="{{url('admin/product')}}">
+                                <i class="fas fa-product-hunt"></i>Product</a>
                         </li>
                     </ul>
                 </nav>
@@ -120,7 +152,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="logout">
+                                                <a href="{{url('admin/logout')}}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>

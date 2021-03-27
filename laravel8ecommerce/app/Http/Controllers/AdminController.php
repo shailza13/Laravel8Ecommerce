@@ -20,7 +20,7 @@ class AdminController extends Controller
         }
         else
         {
-            $request->session()->flash('error','Access Denied');
+            // $request->session()->flash('error','Access Denied');
             return view('admin/login');
         }
         return view('admin/login');
